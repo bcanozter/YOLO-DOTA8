@@ -1,0 +1,14 @@
+services:
+  dota8:
+    build: ./
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=nvidia.com/gpu=all
+    volumes:
+      - /dev/dri:/dev/dri
+    runtime: nvidia
+    privileged: true
+    tty: true
+    stdin_open: true
+    network_mode: host
+    ipc: host
+    command: tail -f /dev/null
