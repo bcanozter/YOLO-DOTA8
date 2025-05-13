@@ -16,6 +16,6 @@ RUN apt-get update \
 
 COPY . ${WORKDIR}/YOLO-DOTA8
 RUN pip3 install -r ${WORKDIR}/YOLO-DOTA8/src/requirements.txt
-
+WORKDIR ${WORKDIR}/YOLO-DOTA8
 # Run a default command, e.g., starting a bash shell
 CMD ["bash"]
